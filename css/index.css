@@ -1,0 +1,19 @@
+body {
+  margin-left: 10%;
+  margin-right: 10%;
+  background-image: url("/img/SimonBerger_Pexels_background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+main {
+  background-color: white;
+  opacity: 70%;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
