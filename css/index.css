@@ -1,19 +1,127 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  margin-left: 10%;
-  margin-right: 10%;
-  background-image: url("/img/SimonBerger_Pexels_background.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  background-color: white;
+  margin: 0;
 }
 
 main {
+  margin-top: 10vh;
   background-color: white;
-  opacity: 70%;
+  width: 100%;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: rgb(146, 4, 4);
+}
+
+aside p {
+  text-align: center;
+}
+
+.project {
+  border: 2px solid black;
+  border-radius: 10%;
+  width: 33%;
+  height: 40vh;
+  padding: 5px;
+}
+
+#landing, #profile-container, #portfolio, #portfolio-container {
+  display: flex;
+}
+
+#landing {
+  height: 90vh;
+}
+
+#landing article {
+  width: 50%;
+}
+
+h3, #greeting p {
+  text-align: center;
+}
+
+#greeting h3 {
+  margin-top: 30vmin;
+}
+
+h3 {
+  font-size: 60px;
+}
+
+h5 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 30px;
+}
+
+#profile-container {
+  justify-content: space-around;
+  align-content: space-around;
+  max-height: 80%;
+  margin-top: 7vh;
+}
+
+#profile-photo {
+  border: 10px solid blueviolet;
+  border-radius: 50%;
+}
+
+#navbar {
   width: 100%;
+  height: 10vh;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  z-index: 1;
+  background-color: blueviolet;
+}
+
+#links {
+  width: 50%;
+  margin-left: 66%;
+  margin-top: 3vmin;
+  margin-bottom: 2.5vmin;
+  font-size: 30px;
+}
+
+#logo {
+  position: fixed;
+  height: 8vmin;
+  width: 8vmin;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+#portfolio {
+  justify-content: space-around;
+  background-color: blueviolet;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  height: 90vh
+}
+
+#portfolio aside {
+  width: 20vw;
+  margin-left: 5vw;
+}
+
+#portfolio-container {
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 2vh;
 }
