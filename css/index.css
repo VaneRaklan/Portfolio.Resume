@@ -8,7 +8,6 @@ body {
 }
 
 main {
-  margin-top: 10vh;
   background-color: white;
   width: 100%;
 }
@@ -36,14 +35,34 @@ aside p {
 
 .project h5 {
   text-align: center;
+  margin-top: 33%;
 }
 
-#landing, #profile-container, #portfolio, #portfolio-container {
+.back-arrow {
+  position: fixed;
+  z-index: 1;
+  top: 135px;
+  left: 40px;
+  background-color: blueviolet;
+  border-radius: 50%;
+}
+
+#landing, #profile-container, #portfolio, #portfolio-container, nav{
   display: flex;
 }
 
-#landing {
+#landing, #proximity, #seasonality, #affordability, #closest {
+  border-top: 10vh solid white;
   height: 90vh;
+}
+
+nav {
+  gap: 7vmin;
+  width: 50%;
+  margin-left: 55vw;
+  margin-top: 3vmin;
+  margin-right: 5vw;
+  font-size: 30px;
 }
 
 #landing article {
@@ -92,14 +111,6 @@ p {
   background-color: blueviolet;
 }
 
-#links {
-  width: 50%;
-  margin-left: 66%;
-  margin-top: 3vmin;
-  margin-bottom: 2.5vmin;
-  font-size: 30px;
-}
-
 #logo {
   position: fixed;
   height: 8vmin;
@@ -128,4 +139,10 @@ p {
   flex-wrap: wrap;
   gap: 15px;
   margin-top: 2vh;
+}
+
+
+
+.hidden {
+  display: none;
 }
