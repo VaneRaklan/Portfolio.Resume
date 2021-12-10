@@ -34,6 +34,10 @@ aside p {
   padding: 5px;
 }
 
+.project h5 {
+  text-align: center;
+}
+
 #landing, #profile-container, #portfolio, #portfolio-container {
   display: flex;
 }
