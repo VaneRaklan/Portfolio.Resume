@@ -141,7 +141,11 @@ p {
   margin-top: 2vh;
 }
 
-
+#proximity p, #affordability p, #closest p, #seasonality p {
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+}
 
 .hidden {
   display: none;
