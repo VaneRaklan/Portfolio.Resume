@@ -1,128 +1,196 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-  <meta charset="utf-8">
-  <title>Antonio Ramirez</title>
-  <link rel="stylesheet" href="css/index.css">
-  <script src="js/index.js" type="text/javascript"></script>
-</head>
-
-<body>
-  <header id="navbar">
-    <a href="#landing"><img id="logo" src="img/mylogo.png" alt="A R"></a>
-    <nav id="links">
-      <a href="#aboutme">About Me</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contactme">Reach Out</a>
-    </nav>
-  </header>
-
-  <main>
-    <section id="main-page">
-      <section id="landing">
-        <article id="greeting">
-          <h3> Welcome! </h3>
-          <p>This website is still a work in progress, for now you can find my general resume 
-            <b><a href="">here</a></b>
-            and some of my projects below!
-          </p>
-        </article>
-        <article id="profile-container">
-          <img id="profile-photo" src="img/profile-1x.jpg" alt="">
-        </article>
-      </section>
-
-      <section id="portfolio">
-        <aside>
-          <h3>Portfolio</h3>
-          <p>These are the projects you are looking for 👀</p>
-        </aside>
-        <div id="portfolio-container">
-          <article id="affordability-connector" class="project">
-            <h5>Minimum Wage Rent Affordability Index</h5>
-          </article>
-          <article id="closest-connector" class="project">
-            <h5>Closest Emergency Personel</h5>
-          </article>
-          <article id="proximity-connector" class="project">
-            <h5>Proximity as a Factor for Measuring Food Insecurity</h5>
-          </article>
-          <article id="seasonality-connector" class="project">
-            <h5>Seasonality of Crime in Seattle</h5>
-          </article>
-        </div>
-      </section>
-    </section>
-    
-    <!-- Proximity as a Factor -->
-    <section class="hidden" id="proximity">
-      <img class="back-arrow" src="img/backarrow.png" alt="back arrow">
-      <h3>Proximity as a Factor for Food Insecurity</h3>
-      <p>
-        Food insecurity is a topic that I've grown passionate about in recent years and 
-        when researching the general topic I found research on how people measure food 
-        insecurity. The interesting thing that I found was that proximity to adequate food
-        (i.e. how many grocery stores are within X miles of your home) wasn't that prevalent
-        in the literature. Thus, I wrote a research proposal for a final project to incorporate
-        proximity as an indicator variable, using Tacoma, WA as the study area.
-        <br>
-        <br>
-        Disregard the Budget section, the class wasn't focused on creating an accurate budget because of time constraints and more financial variables to consider and the professor wanted us to put more time into the research than the budgeting.
-      </p>
-      <p>Click <b><a href="https://vaneraklan.github.io/aramirez/FoodInsecurity_ProximityFactor.pdf" target="_blank" rel="noreferrer noopener">here</a></b> to see the report</p>
-    </section>
-    
-    <!-- Closest Emergency Personel -->
-    <section class="hidden" id="closest">
-      <img class="back-arrow" src="img/backarrow.png" alt="back arrow">
-      <h3>Closest Emergency Personel</h3>
-      <p>Mapping of fire stations, police stations, and hospitals in the city of Seattle. 
-        Users can search locations or click on the map to drop a marker and see the closest 
-        of each emergency personel as well as fastest routes and associated travel times to each. 
-        Users can also specify mode of transportation.
-        <br>
-        <br>
-        Uses Mapbox GL, Mapbox Directions and Turf API
-        <br>
-        Data sourced from Seattle's open data portal</p>
-      <p>Click <b><a href="https://vaneraklan.github.io/ClosestEmergencyPersonel/index.html" target="_blank" rel="noreferrer noopener">here</a></b> to see the project</p>
-    </section>
-    
-    <!-- Seasonality of Crime in Seattle -->
-    <section class="hidden" id="seasonality">
-      <img class="back-arrow" src="img/backarrow.png" alt="back arrow">
-      <h3>Seasonality of Crime in Seattle</h3>
-      <p>
-        Crime was a topic that we had collectively landed on, however the seasonality idea
-        came after we found the data. The sheer volume and thoroughness of Seattle Police 
-        Department's crime data allowed us to hone in on specific categories of crime and
-        organize each data point into temporal categories for seasons in order for us to 
-        our analyses.
-        <br>
-        <br>
-        Data was sourced from Seattle's open data portal
-      </p>
-      <p>Click <b><a href="https://vaneraklan.github.io/aramirez/SeasonalityOfSeattleCrime.pdf" target="_blank" rel="noreferrer noopener">here</a></b> to see the report</p>
-      <p>Click <b><a href="https://storymaps.arcgis.com/stories/d33c77cfb7c44cf49a5d7a245fbd1c95" target="_blank" rel="noreferrer noopener">here</a></b> to see the story map</p>
-    </section>
-    
-    <!-- Minimum Wage Rent Affordability Index -->
-    <section class="hidden" id="affordability">
-      <img class="back-arrow" src="img/backarrow.png" alt="back arrow">
-      <h3>Minimum Wage Rent Affordability Index</h3>
-      <p>
-        Using data for the two most populous cities in each US state, I created a composite 
-        index that would score each city on its rent affordability. The indicators I used 
-        were minimum wage, rent for a 1-bedroom apartment, rent for a 2-bedroom apartment, 
-        and the percentage of a month's income for full-time minimum wage work for one 
-        person that would be a month's rent for a 1-bedroom apartment. 
-        <br>
-        <br>
-        Data was sourced form Zumper's rent-research API.
-      </p>
-      <p>Click <b><a href="https://vaneraklan.github.io/MinimumWageRentAffordabilityIndex/index.html" target="_blank" rel="noreferrer noopener">here</a></b> to see the project</p>
-    </section>
-  </main>
-</body>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="index.js" type="text/javascript"></script>
+        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header>
+            <nav class="topnav responsive" id="myLinks">
+                <a href="#landing"><img id="logo" src="img/mylogo.png" alt="A R"></a>
+                <section>
+                    <a href="#about">About Me</a>
+                    <a href="#current">Current Events</a>
+                    <a href="#projects">My Projects</a>
+                    <a href="#contact">Contact Me</a>
+                </section>
+                <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                <a id="burger-icon">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+            <section id="responsive-links" class="hidden" >
+                <a href="#about">About Me</a>
+                <a href="#current">Current Events</a>
+                <a href="#projects">My Projects</a>
+                <a href="#contact">Contact Me</a>
+            </section>
+        </header>
+        <main>
+            <!-- MAIN CONTENT -->
+            <section id="landing">
+                <h1>Welcome, glad you could make it!
+                    <br>
+                    <br>
+                    I'm Antonio Ramirez, and I hope you find
+                    what you're looking for!
+                </h1>
+                <article>
+                    <i class="fa fa-arrow-down"></i>
+                    <i class="fa fa-arrow-down"></i>
+                    <i class="fa fa-arrow-down"></i>
+                </article>
+            </section>
+            <section id="about">
+                <h1>Nice to meet you!</h1>
+                <img src="img/profile1.jpg" alt="College student perched between sides of a window">
+                <p>A little bit about myself, I'm a recent graduate
+                    from the University of Washington in Seattle. I 
+                    got a bachelor's degree in Geography: Data Science 
+                    with a minor in Informatics.
+                    <br><br>
+                    I'm fascinated with the interdisciplinary-ness of
+                    data science, there's so much to learn from  the 
+                    intersections between domains of expertise. I'm 
+                    so excited to take my academics into the real world 
+                    and really figure out how much more there is to know!
+                </p>
+                <a href="resume_12162021.pdf" target="_blank" rel="noreferrer noopener">See Resume</a>
+            </section>
+            <section id="current">
+                <h1>What I'm Up To</h1>
+                <article class="entry">
+                    <h2>December 16th, 2021</h2>
+                    <p>The job hunt is on! LinkedIn and Handshake have become my best friends, but 
+                        I'm still worried about my portfolio. I don't have anything that's 
+                        machine learning related so I've been working my way through the entire 
+                        Kaggle courseline so I can refresh on the various ML algorithms and models.
+                        <br><br>
+                        From there, the goal is to do some basic projects to showcase my knowledge 
+                        of those facets then conduct my own unique project to expand my portfolio. 
+                        One idea is to see if a model could predict/project homelessness for an area. 
+                        Data from the Census Bureau and the Department of Housing and Urban Development 
+                        would be strong candidates for sources, however I think city/specific area 
+                        data would be the hardest to pinpoint.
+                    </p>
+                </article>
+            </section>
+            <section id="projects">
+                <h1>Here's some of my work!</h1>
+                <section id="project-container">
+                    <article id="proximity">
+                        <h2>Proximity as a Factor for Measuring Food Insecurity</h2>
+                        <p>- Research Proposal- </p>
+                    </article>
+                    <article id="seasonality">
+                        <h2>Seasonality of Crime in Seattle</h2>
+                        <p>- GIS, Data Analysis -</p>
+                    </article>
+                    <article id="emergency">
+                        <h2>Closest Emergency Personel</h2>
+                        <p>- GIS -</p>
+                    </article>
+                    <article id="affordability">
+                        <h2>Minimum Wage Rent Affordability Index</h2>
+                        <p>- GIS, Statistics -</p>
+                    </article>
+                </section>
+            </section>
+            <section id="contact">
+                <h1>Reach out!</h1>
+                <p>Since this is hosted through Github, I don't have a way of making
+                    a contact form that is secure and/or seemless since Github Pages
+                    doesn't support PHP. In the future I'll host this elsewhere, but 
+                    for now here's my email:
+                    <br><br>
+                    anton.manuel.ramirez@gmail.com</p>
+                <br>
+                <section id="company-icons-container">
+                    <a href="https://www.linkedin.com/in/the-real-antonio-ramirez/" target="_blank" rel="noreferrer noopener"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="https://github.com/VaneRaklan" target="_blank" rel="noreferrer noopener"><i class="fab fa-github-square" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/that_nerd_antonio/" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram-square" aria-hidden="true"></i></a>
+                </section>
+            </section>
+            <!-- PROJECT PAGES -->
+            <section class="hidden" id="project-page">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                <section class="hidden" id="proximity-page">
+                    <h1>Proximity as an Indicator for Measuring Food Insecurity</h1>
+                    <br>
+                    <p> For one of my classes I wrote a research paper centered around
+                        measuring food insecurity. From the literature that I found, 
+                        proximity (i.e. to the nearest grocery store(s)) was not brought 
+                        up as an indicator variable. There was a lot of weight on variables 
+                        that dealt with finances, which I thought proximity has a hand in. 
+                        Proximity indicates if you are within walking distance or if you 
+                        need money for public transit or gas. It indicates your food options, 
+                        some places have more variety or overall better quality products. 
+                        Thus, I proposed a study that could be conducted in Tacoma, WA since 
+                        that's where I'm from and it made it easier to plan things out.
+                        <br><br>
+                        Disregard the Budget section, the class wasn't 
+                        focused on creating an accurate budget because of time 
+                        constraints and more financial variables to consider and the 
+                        professor wanted us to put more time into the research than 
+                        the budgeting.</p>
+                    <br>
+                    <article>
+                        <a href="https://vaneraklan.github.io/aramirez/FoodInsecurity_ProximityFactor.pdf" target="_blank" rel="noreferrer noopener">See Report</a>
+                    </article>
+                </section>
+                <section class="hidden" id="seasonality-page">
+                    <h1>Seasonality of Crime in Seattle</h1>
+                    <br>
+                    <p>My group members and I found ourselves being really interested in crime
+                        data, and when we found data on the city's open data portal with almost 
+                        a million rows we knew we were onto something. The data was extremely 
+                        thorough which allowed us to be very flexible/unique-ish when it came 
+                        to topics. We landed on a temporal analysis of specific types of crime 
+                        and chose seasonality because it sounded interesting. Luckily, that decision 
+                        meant a lot less graphs to make which meant we wouldn't oversaturate the reader 
+                        with visualizations.
+                    </p>
+                    <br>
+                    <article>
+                        <a href="https://vaneraklan.github.io/aramirez/SeasonalityOfSeattleCrime.pdf" target="_blank" rel="noreferrer noopener">See Report</a>
+                        <a href="https://storymaps.arcgis.com/stories/d33c77cfb7c44cf49a5d7a245fbd1c95" target="_blank" rel="noreferrer noopener">See Project</a>
+                    </article>
+                </section>
+                <section class="hidden" id="emergency-page">
+                    <h1>Closest Emergency Personel</h1>
+                    <br>
+                    <p>Mapping of fire stations, police stations, and hospitals in 
+                        the city of Seattle. Users can search locations or click on 
+                        the map to drop a marker and see the closest of each emergency 
+                        personel as well as fastest routes and associated travel times 
+                        to each. Users can also specify mode of transportation.
+                        <br><br>
+                        Uses Mapbox GL, Mapbox Directions and Turf API
+                        Data sourced from Seattle's open data portal</p>
+                    <br>
+                    <article>
+                        <a href="https://vaneraklan.github.io/ClosestEmergencyPersonel/index.html" target="_blank" rel="noreferrer noopener">See Project</a>
+                    </article>
+                </section>
+                <section class="hidden" id="affordability-page">
+                    <h1>Minimum Wage Rent Affordability Index</h1>
+                    <br>
+                    <p>Using data for the two most populous cities in each US state, I 
+                        created a composite index that would score each city on its rent 
+                        affordability. The indicators I used were minimum wage, rent for 
+                        a 1-bedroom apartment, rent for a 2-bedroom apartment, and the 
+                        percentage of a month's income for full-time minimum wage work 
+                        for one person that would be a month's rent for a 1-bedroom 
+                        apartment. Data was sourced form Zumper's rent-research API.</p>
+                    <br>
+                    <article>
+                        <a href="https://vaneraklan.github.io/MinimumWageRentAffordabilityIndex/" target="_blank" rel="noreferrer noopener">See Project</a>
+                    </article>
+                </section>
+            </section>
+        </main>
+    </body>
 </html>

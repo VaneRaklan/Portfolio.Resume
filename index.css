@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+/* HTML & BODY; WHOLE DOCUMENT RELATED */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+    font-size: 16px;
+    font-family:'Abril Flatface', cursive;
+}
+
+html, body, main {
+    height: 100%;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1vh;
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.33em;
+}
+
+/* HEADER & NAVBAR */
+body header {
+    background-color: blueviolet;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 12vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav {
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav section {
+    display: none;
+}
+
+nav > a:first-child {
+    height: 80%;
+    margin-left: 3%;
+}
+
+#logo {
+    height: 100%;
+}
+
+#burger-icon {
+    max-height: 100%;
+    font-size: 5vmax;
+    color: black;
+    margin-right: 5%;
+}
+
+#responsive-links {
+    height: max-content;
+    width: 100%;
+}
+
+#responsive-links a{
+    display: block;
+    text-align: center;
+    color: blueviolet;
+    background-color: black;
+    text-decoration: none;
+    font-size: 2.5em;
+}
+
+#responsive-links a:hover, nav section a:hover{
+    color: white;
+}
+
+@media screen and (min-width:1024px) {
+    nav section {
+        display: flex;
+        justify-content: flex-end;
+        column-gap: 7%;
+        align-items: center;
+        flex-grow: 1;
+        height: 100%;
+        margin-right: 5%;
+    }
+
+    nav section a {
+        font-size: 1.75em;
+        text-decoration: none;
+        color: black;
+    }
+
+    #responsive-links, #burger-icon {
+        display: none;
+    }
+}
+
+/* ==== MAIN CONTENT ==== */
+main > section {
+    scroll-margin-top: 12vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+/* LANDING */
+#landing {
+    height: 100vh;
+    border-top: 12vh solid white;
+    background-color: blueviolet;
+    justify-content: center;
+}
+
+#landing article {
+    margin-top: 10%;
+    animation: slide1 1s ease-in-out infinite;
+}
+
+@keyframes slide1 {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+  
+    50% {
+      transform: translate(0, 10px);
+    }
+}
+
+/* ABOUT ME */
+#about img {
+    height: 44vh;
+    margin: 5%;
+    border-radius: 50%;
+    border: 4px solid blueviolet;
+}
+
+#about a {
+    font-weight: bold;
+    border: 2px solid blueviolet;
+    border-radius: 28px;
+    text-align: center;
+    padding: 1%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    text-decoration: none;
+    color: black;
+}
+
+#about a:hover {
+    background-color: blueviolet;
+}
+
+/* CURRENT EVENTS */
+.entry {
+    width: 100%;
+    margin-top: 2%;
+}
+
+.entry h2 {
+    text-align: left;
+    text-decoration: underline;
+}
+
+.entry p {
+    text-align: left;
+}
+
+/* PROJECTS */
+#project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projects article {
+    border: 2px solid blueviolet;
+    border-radius: 25%;
+    margin: 2%;
+    padding: 2%;
+    width: 66%;
+    height: 33vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#projects article:hover{
+    background-color: blueviolet;
+    cursor: pointer;
+}
+
+#projects p {
+    font-size: 1em;
+}
+
+@media screen and (min-width:600px) {
+    #project-container {
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 2%;
+    }
+
+    #projects article {
+        flex-basis: 33%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    #projects article {
+        flex-basis: 25%;
+    }
+}
+
+/* CONTACT ME */
+#contact {
+    height: 88vh;
+    justify-content: space-between;
+}
+
+#contact section {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5%;
+}
+
+#contact i {
+    font-size: 4em;
+    color: black;
+}
+
+/* ==== PROJECT PAGES ==== */
+
+#project-page {
+    border-top: 12vh solid white;
+    border-bottom: 10vh solid white;
+}
+
+.fa-arrow-left {
+    font-size: 3em;
+    border-radius: 50%;
+    padding: 5px;
+    align-self: flex-start;
+    margin-top: 3%;
+}
+
+.fa-arrow-left:hover {
+    cursor: pointer;
+    background-color: blueviolet;
+}
+
+#project-page a {
+    align-self: center;
+    font-weight: bold;
+    border: 2px solid blueviolet;
+    border-radius: 28px;
+    text-align: center;
+    padding: 1%;
+    text-decoration: none;
+    color: black;
+}
+
+#project-page a:hover {
+    background-color: blueviolet;
+}
+
+#project-page article {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* NEEDS TO BE LAST */
+.hidden {
+    display: none;
+}
